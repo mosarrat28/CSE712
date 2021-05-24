@@ -177,5 +177,24 @@ There is more __over-fitting__ in text dataset than image dataset because of oov
 
 ## Week 4 - Sequence model and literature
 
-Predict the next word in a sentence
+Predict the next word in a sentence/word generation:
 
+​	1.The whole song is converted into a single single. 
+
+​	2.For input sentences- sub sentences N-gram sequence is created, with increasing one word per 	sequence. 
+
+​	3.The longest sequence is found and other sequences are padded accordingly.
+
+4. Sequences are turned into x and y, y being the last token and the rest being x
+5. The label is one hot encoded in y.
+6. Use a bi-directional LSTM for training
+7. Categorial crossentropy is used as categories are trained.
+8. A seed text is declared and asked for the next 100 words.
+9. A token list is created for each of the 100 words. The token list is then padded. Then that's going to be passed into the model. The class for the generated token list is predicted and then an output word is generated.
+10. The new generated word along with the previous seed sentence is fed to the model again and repeats until 100  words are formed
+
+problem:
+
+Repeatition of words due to small corpus
+
+solution: could be solved using a large corpus. bidirection LSTM provides better result than uni directional LSTM
