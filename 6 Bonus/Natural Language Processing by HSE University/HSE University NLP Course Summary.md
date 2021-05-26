@@ -14,7 +14,20 @@ __What is "Word"__
 Let's for now, define "Text" as sequence of words. Then again, "Word" can be described as __meaningful__ sequence of characters. One of the problems of NLP is boundaries of words. For example in English words are separated by spaces, but in languages like chinese and japanese, words are not separat
 
 __Tokenization__
-Process of splitting a text into meaningful pieces of chunks 
+Process of splitting a text into meaningful pieces of chunks.
+The python NLTK library contains useful tokenizer modules, such as 
+*WhitespaceTokenizer()*
+*TreebankWordTokenizer()*
+*WordPunctTokenizer()*
+
+Almost every NLP task requires preprocessing that uses techniques such as
+- Normalization
+- Stemming
+- Lemmatization
+
+The next step is to convert the tokens into features, and one of the way to do that is __text vectorization__. The method Bag of words uses text vectorization to turn tokens into features. Where the each token has a feature column, the test sentences are used to fill up the column with number of occurance of the token. 
+
+These counted frequencies as columns can be replaced by TF(Term Frequency)-IDF(Inverse Document Frequency) values to have better performing Bag of words model.
 
 
 ### Week 2
@@ -37,13 +50,22 @@ when n = 1
 it is called __unigram__ for n = 2 it is __bigram__ for n = 3 it is __trigram__
 
 To evaluate how good an n-gram language model is following tools are used
+
 __Perplexity__
 Perplexity describes how well a probability distribution predicts a sample. 
 Perplexity of a bi-gram model: 
 -   PP(W) = N root ( product N over all I, 1 / P(Wi|Wi-1) )
 basically the lower perplexity, the higher is the probability, or the better is the model.
 
-
+__Smoothing__
+ML model may estimate probability as 0 if they face unseen words, to solve this data sparsity problem smoothing is used. 
+Following smoothing techniques are discussed:
+1. Add-one or (Add-k) smoothing
+2. Laplacian Smoothing
+3. Katz backoff
+4. Interpolation Smoothing
+5. Absolute discounting
+6. Kneser-Ney smoothing
 
 __Hidden Markov Models__
 The problem of sequence taggin is solved using hidden markov models in this lesson. The problem can be defined such that, given a sequence of tokens, the most probable sequence of labels for this tokens needs to be inferred. 
