@@ -10,6 +10,8 @@ Coursera Profile link: https://www.coursera.org/user/496d2b8f33ddc6f896294d4dc02
 
 ## Course 1: 
 
+By Coursera:
+
 [Natural Language Processing in TensorFlow](https://www.coursera.org/learn/natural-language-processing-tensorflow/home/welcome)  - Completed
 
 [View Certificate](https://www.coursera.org/account/accomplishments/records/7YDKNBTB9SDY)
