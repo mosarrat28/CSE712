@@ -115,17 +115,50 @@ import tensorflow, numpy, math, re, beautifulsSoup (To handle encoded data, in t
 
 ###### Stage 2: Data pre processing
 
+- Load data from drive, the data do not have any headers. 
+- Declare engine as python Encoding as laton1 
+
+0 indicates negative sentiment
+1 indicates positive sentiment
+
+- Data cleaning 
+
+Get rid of the unnecessary columns (data.drop id, date, query, user)
+
+Clean tweets
+Each tweet -> strings
+
+- Use a regex to 
+  -get rid or retweet
+  -Get rid of links
+  -get rid of numbers
+  -get rid of white  spaces 
+
+- Set data lebels to 0 and 1s 
+
+- Tokenization 
+  Sentence -> list of number
+  Cleaned data now changed into input sequences.
+-  Padding
+  Find the maximum length of the sentences and pad all other sequences to post. 
+  Split data to test and train by using random function. 
+
+
+
 ###### Stage 3: Model
 
-Embedding layer
+Deep convolutional NN
 
-Conv layers - Bigram, trigram, fourgram
+- Embedding layer
 
-Dense layers 
+- Conv layers - Bigram, trigram, fourgram
 
-dropout layer (to avoid overfitting)
+- Dense layers 
 
-Last dense layer - a sigmoid function is used as binary classification is done
+- dropout layer (to avoid overfitting)
+
+- Last dense layer - a sigmoid function is used as binary classification is done
+
 
 ###### Stage 4: Application
 
