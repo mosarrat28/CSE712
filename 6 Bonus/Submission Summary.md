@@ -28,6 +28,7 @@ https://www.udemy.com/certificate/UC-260717a2-e3f1-4533-9203-eebc3d66d878/
 
 By Coursera:
 
-[Natural Language Processing](https://www.coursera.org/learn/language-processing/home/welcome)
+[Natural Language Processing](https://www.coursera.org/learn/language-processing/home/welcome) - Completed
 
-All videos, quizes and assignments are completed. Peer graded assignments are in review process. I will get the certificate as soon as the assignments are reviewed.
+[View Certificate](https://www.coursera.org/account/accomplishments/records/UMFX7ZYSHY5N)
+
